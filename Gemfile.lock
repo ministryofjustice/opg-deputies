@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/mongoid/mongoid.git
+  revision: 44b1d46e0cf0792d8c4112330f6c05889c156974
+  specs:
+    mongoid (4.0.0)
+      activemodel (~> 4.0.0)
+      moped (~> 2.0.beta2)
+      origin (~> 1.0)
+      tzinfo (~> 0.3.37)
+
+GIT
   remote: https://github.com/ministryofjustice/moj_frontend_toolkit_gem.git
   revision: d61df6019230dad6dcb82d776046a8421964e600
   tag: v0.0.40
@@ -35,6 +45,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.14)
+    bson (2.0.0.rc2)
     builder (3.1.4)
     byebug (2.2.2)
       columnize (~> 0.3.6)
@@ -98,7 +109,12 @@ GEM
     method_source (0.8.2)
     mime-types (1.25)
     minitest (4.7.5)
+    moped (2.0.0.beta2)
+      bson (~> 2.0.0.rc2)
+      optionable (~> 0.1.1)
     multi_json (1.8.1)
+    optionable (0.1.1)
+    origin (1.1.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -194,6 +210,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   moj_frontend_toolkit_gem!
+  mongoid (~> 4.0.0)!
   pry-byebug
   rails (= 4.0.0)
   rspec-rails
