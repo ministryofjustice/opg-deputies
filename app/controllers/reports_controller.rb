@@ -13,7 +13,19 @@ class ReportsController < ApplicationController
 
   def update
     @client = Client.find(params[:client_id])
-    @report = @client.reports.find(params[:id]).update_attributes(params.require(:client_report).permit(:name, :address, :telephone))
+    attributes = [:period_start,
+      :period_end,
+      :decisions,
+      :client_involvement,
+      :assets_list,
+      :capital_expenditure,
+      :property_maintenance,
+      :investments_purchased,
+      :deputy_expenses,
+      :gifts,
+      :further_details]
+    @report = @client.reports.find(params[:id]).update_attributes(params.require(:report).permit(attributes))
+    redirect_to client_path(@client)
   end
 
 end
