@@ -1,1 +1,7 @@
-%h1= @client.name
+%header.page-header.group
+  %h1
+    %span Client
+    = @client.name
+
+%p
+  = link_to 'Add annual report', '', class: 'button'
