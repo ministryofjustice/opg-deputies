@@ -4,4 +4,16 @@
     = @client.name
 
 %p
-  = link_to 'Add annual report', '', class: 'button'
+  Address
+  %br
+  = @client.address
+%p
+  Telephone
+  %br
+  = @client.telephone
+
+%p
+  = link_to 'Edit client details', edit_client_path
+
+%p
+  = link_to 'Update latest report', new_client_report_path(@client)

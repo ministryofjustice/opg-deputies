@@ -5,7 +5,10 @@ OpgDeputies::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'clients#new'
 
-  resources :clients
+  resources :clients do
+    resources :reports
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

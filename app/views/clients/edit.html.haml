@@ -1,6 +1,7 @@
 %header.page-header.group
   %h1
-    Confirm client details
+    = @action
+    client details
 
 = form_for @client, html: { class: 'form' } do |f|
   %p
@@ -12,4 +13,4 @@
   %p
     = f.label :telephone
     = f.text_field :telephone
-  = f.submit "Continue", class: 'button'
+  = f.submit (@action[/Confirm/] ? 'Continue' : 'Update'), class: 'button'

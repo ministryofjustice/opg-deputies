@@ -5,10 +5,12 @@ class ClientsController < ApplicationController
 
   def create
     @client = Client.create(name: 'John Smith', address: '63 Avenue Road', telephone: '020 1234 5678')
+    flash[:confirm] = 'Confirm'
     redirect_to edit_client_path(@client)
   end
 
   def edit
+    @action = flash[:confirm] || 'Edit'
     @client = Client.find(params[:id])
   end
 

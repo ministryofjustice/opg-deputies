@@ -28,7 +28,7 @@
   select[size],
   textarea {
       background-color: #f9f9f9;
-      border: 2px inset;
+      border: 1.25px inset;
       @include ie-lte(8){
         border: 1px inset $border-colour; // Otherwise IE gets a black border
       }

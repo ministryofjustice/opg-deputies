@@ -4,5 +4,5 @@ class Client
   field :address, type: String
   field :telephone, type: String
 
-  # embeds_many :reports
+  embeds_many :reports
 end
