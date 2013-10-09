@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 source 'https://BnrJb6FZyzspBboNJzYZ@gem.fury.io/govuk/'
 
+ruby '2.0.0'
+
 gem 'rails', '4.0.0'
 gem 'haml-rails'
 gem 'sass-rails', '~> 4.0.0'
@@ -14,7 +16,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
-gem "mongoid", "~> 4.0.0", github: 'mongoid/mongoid'
+gem 'mongoid', '~> 4.0.0', github: 'mongoid/mongoid'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
