@@ -49,6 +49,7 @@ module OpgDeputies
       gov-static/gov-fonts-ie8.css
       gov-static/gov-print.css
       moj-base.css
+      global.css
       gov-static/gov-ie.js
     )
   end
