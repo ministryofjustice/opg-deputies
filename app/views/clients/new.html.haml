@@ -1,0 +1,7 @@
+%header.page-header.group
+  %h1
+    Add new client
+= form_tag clients_path, method: 'post', class: 'form' do
+  = label_tag :c, 'Enter claim code'
+  = text_field_tag :c
+  = submit_tag 'Go'

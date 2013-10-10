@@ -1,0 +1,52 @@
+%header.page-header.group
+  %h1
+    %span Report
+    = @client.name
+
+%script
+  :plain
+    $(document)
+      .ready(function() {
+        $('.menu .item').tab();
+      })
+    ;
+
+= form_for [@client, @report], html: { class: 'form' } do |f|
+  %p
+    = f.label :period_start
+    = f.text_field :period_start
+    = f.label :period_end
+    = f.text_field :period_end
+
+  = field_set_tag 'Decisions' do
+    %p
+      = f.label :decisions, 'List the significant decision(s) that you have made as Deputy during the reporting period.'
+      = f.text_area :decisions
+    %p
+      = f.label :client_involvement, raw('To what extent were you able to involve our client in the decision making process?<br/> You only need comment on decisions taken as part of your role as Deputy.<br/> Include here any information about decisions the client is able to make e.g. any funds they are able to manage themselves.')
+      = f.text_area :client_involvement
+  = field_set_tag 'Property and Affairs Deputies' do
+    %p
+      = f.label :assets_list, 'List here any capital assets (e.g. monies in Court Funds Office, savings, property, investments, stocks, shares and/or bonds) held by the Client and their values. If the Client is living in their property, you do not need to include it as an asset.'
+      = f.text_area :assets_list
+    %p
+      = f.label :capital_expenditure, 'Capital expenditure/major purchases'
+      = f.text_area :capital_expenditure
+    %p
+      = f.label :property_maintenance, 'Property maintenance/improvement'
+      = f.text_area :property_maintenance
+    %p
+      = f.label :investments_purchased
+      = f.text_area :investments_purchased
+    %p
+      = f.label :deputy_expenses, 'Deputy’s expenses'
+      = f.text_area :deputy_expenses
+    %p
+      = f.label :gifts
+      = f.text_area :gifts
+  = field_set_tag 'Further details' do
+    %p
+      = f.label :further_details, 'Any other information you wish to provide.'
+      = f.text_area :further_details
+
+  = f.submit 'Save', class: 'button'
