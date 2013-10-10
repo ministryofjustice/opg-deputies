@@ -23,14 +23,15 @@
 
 .inner {
   margin: 0 auto;
-  padding: 2em;
+//  padding: 1em;
+  padding: 30px;
   position: relative;
 }
 
 main#content,
 section#content {
   margin: 0 auto;
-  max-width: 1020px;
+  max-width: 960px;
   position: relative;
   display:block;
 
