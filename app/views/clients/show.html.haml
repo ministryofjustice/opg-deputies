@@ -1,0 +1,19 @@
+%header.page-header.group
+  %h1
+    %span Client
+    = @client.name
+
+%p
+  Address
+  %br
+  = @client.address
+%p
+  Telephone
+  %br
+  = @client.telephone
+
+%p
+  = link_to 'Edit client details', edit_client_path
+
+%p
+  = link_to 'Update latest report', new_client_report_path(@client)
